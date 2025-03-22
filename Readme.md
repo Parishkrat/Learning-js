@@ -1,10 +1,5 @@
 Learning js
 
-joke
-
-
-
-
 
 
 
