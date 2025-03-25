@@ -18,7 +18,7 @@ app.post('/api/product',(req,res)=>{
 })
 
 //connect database with mongoodb
-mongoose.connect("mongodb://admin:6nDzGlKWQuKGqUPD@backened-shard-00-00.19alv.mongodb.net:27017,backened-shard-00-01.19alv.mongodb.net:27017,backened-shard-00-02.19alv.mongodb.net:27017/?replicaSet=atlas-qubt49-shard-0&ssl=true&authSource=admin&retryWrites=true&w=majority&appName=Backened")
+mongoose.connect("")
 .then(()=>{
     console.log("connected to database")
     //connect with server
