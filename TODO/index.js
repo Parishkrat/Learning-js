@@ -2,9 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const todo = require('./Routes/todo.js');
-const bcrypt = require('bcrypt');
 const userRoutes = require('./Routes/userRoutes.js');
-const jwt = require('jsonwebtoken');
 const app = express();
 
 dotenv.config();
