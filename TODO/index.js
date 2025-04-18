@@ -2,6 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const todo = require('./Routes/todo.js');
+const bcrypt = require('bcrypt');
+const userRoutes = require('./Routes/userRoutes.js');
+const jwt = require('jsonwebtoken');
 const app = express();
 
 dotenv.config();
@@ -14,7 +17,7 @@ app.use(express.json());  // Middleware to parse JSON requests
 app.get('/', (req, res) => res.json({ 'message': 'server is running' }));
 
 app.use('/todo', todo);
-
+app.use('/user', userRoutes);
 // Connect to MongoDB
 
 
@@ -27,3 +30,6 @@ mongoose.connect(DATABASE_URL)
     console.log('DATABASE CONNECTION FAILED');
     console.error(err);
   });
+
+
+  
